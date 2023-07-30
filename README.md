@@ -12,12 +12,16 @@ To set up and run the project locally, follow these steps:
    git clone https://github.com/andrewSky18/CRUD_Bank.git
    ```
 
+
 2. Ensure that you have the following prerequisites installed:
 
    - Java Development Kit (JDK) 17 or higher
    - Apache Maven
    - PostgreSQL
-
+   - Spring Boot 3.1.1
+   - Spring Security
+   - Jakarta Validation
+   - Jason Web Token (JWT)
 3. Configure the PostgreSQL database:
 
    - Create a new database in PostgreSQL for the project.
