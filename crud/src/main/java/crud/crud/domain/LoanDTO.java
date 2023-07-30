@@ -20,5 +20,6 @@ public class LoanDTO {
     private Long customerId;
     @NotNull(message = "The Product Id field is required.")
     private Long productId ;
-
+    @NotNull(message = "The Product Id field is required.")
+    private Long loanRequestTrackerServiceId ;
 }

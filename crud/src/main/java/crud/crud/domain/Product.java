@@ -1,5 +1,6 @@
 package crud.crud.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -46,6 +47,8 @@ import java.util.*;
     @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "product_id")
+    @JsonIgnore
+
     private List<Loan> loans;
 
     public static Product CreateProduct(ProductDTO productDTO) {

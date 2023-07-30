@@ -1,4 +1,5 @@
 package crud.crud.domain;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.*;
@@ -23,6 +24,8 @@ public class Facility {
     private String address;
 
     @OneToMany
+    @JsonIgnore
+
     private Set<Customer> customerSet;
 
 

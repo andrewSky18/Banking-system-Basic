@@ -1,4 +1,5 @@
 package crud.crud.domain;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.OnDelete;
@@ -30,10 +31,15 @@ public class Customer {
     @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "Customer_id")
+    @JsonIgnore
+
     private Set<Loan> loanSet;
+
+    @JsonIgnore
 
     @ManyToOne
     @JoinColumn(name = "Facility_id")
+
     private Facility facility;
 
 
